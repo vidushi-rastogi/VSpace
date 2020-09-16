@@ -1,0 +1,223 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  background: linear-gradient(to right, #2a246d, #04074a);
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+h1,h2,h5 {
+  color: white;
+  font-family: 'Montserrat' !important;
+}
+h1,h2,h5{
+  text-shadow: 2px 2px 4px #000000;
+}
+h1 {
+  background-color: rgb(0, 193, 187);
+  padding: 1% 0% 1% 2%;
+  font-weight: 700 !important;
+}
+h3 {
+  font-family: 'Montserrat';
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  background-color: rgb(0, 193, 187);
+  color: white;
+  padding: 1% 0% 1% 2%;
+
+}
+h2 {
+  font-size: 35px !important;
+}
+h5 {
+  font-size: 25px !important;
+  background-color: rgb(0, 193, 187);
+  padding: 1% 0% 1% 0%;
+}
+p {
+  color: white;
+  font-size: 18px;
+}
+span {
+  color: rgb(1, 255, 240);
+  font-weight: 600;
+}
+i {
+  color: white;
+}
+i:hover {
+  cursor: pointer;
+  color: rgb(3, 208, 201);
+}
+i:active {
+  opacity: 0.5;
+}
+
+/* HEADER SECTION */
+
+#header{
+  padding: 1% 10% 5% 10%;
+}
+#header-div {
+  background-color: rgb(0, 193, 187);
+  text-align: center;
+  height: 100px;
+  padding-top: 10px;
+}
+#about-me {
+  font-size: 4rem !important;
+  font-weight: 800 !important;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+/* WHO-AM-I SECTION */
+#who-am-i {
+  padding: 1% 10% 10% 10%;
+}
+#intro-img-section {
+  text-align: center;
+}
+
+#img1 {
+  width: 60%;
+  height: auto;
+
+}
+
+
+
+/* SKILLS SECTION */
+
+#skills {
+  padding: 3% 10% 5% 10%;
+  background: linear-gradient(to right, rgba(0, 193, 187, 0.72) 60%,rgba(0, 147, 254, 0.71));
+}
+
+#skills-section-img {
+  text-align: center;
+}
+#img2 {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  top: 200px;
+  right: 70px;
+}
+
+
+.col-12 {
+  width: 90%;
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  left: 20px;
+  padding-bottom: 3%;
+}
+.list-class-group {
+  font-size: 22px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+
+
+/* LINKS SECTION */
+
+#links {
+  text-align: center;
+  padding: 3% 10% 5% 10%;
+
+}
+
+.icons{
+  margin-top: 3%;
+}
+
+
+/* MEDIA FRAMES */
+
+@media (min-width: 500px) and (max-width: 767px) {
+
+  #intro-para{
+    margin-top: 20px;
+  }
+  #img2 {
+    display: none;
+  }
+}
+@media (min-width: 330px) and (max-width: 499px) {
+
+  #header{
+    padding: 1% 5% 5% 5%;
+  }
+  #header-div {
+    height: 70px;
+    padding-top: 10px;
+  }
+  #about-me {
+    font-size: 3rem !important;
+  }
+
+  #intro-para{
+    margin-top: 20px;
+  }
+  #img2 {
+    display: none;
+  }
+}
+@media (min-width: 200px) and (max-width: 329px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  h3{
+    font-size: 1.3rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
+  }
+  p{
+    font-size: 15px;
+  }
+  li{
+    font-size: 1rem !important;
+  }
+  i{
+    font-size: 30px !important;
+  }
+
+  #header{
+    padding: 1% 2% 5% 2%;
+  }
+  #header-div {
+    height: 50px;
+    padding-top: 10px;
+  }
+  #about-me {
+    font-size: 2rem !important;
+  }
+
+  #who-am-i {
+    padding: 1% 4% 7% 4%;
+  }
+  #intro-para{
+    margin-top: 20px;
+  }
+  #img2 {
+    display: none;
+  }
+  #skills {
+    padding: 3% 4% 5% 4%;
+  }
+}

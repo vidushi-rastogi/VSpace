@@ -1,0 +1,535 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  background: linear-gradient(to right, #2a246d, #04074a);
+  /* background : url("images/mainBackground.jpg");
+  background-size: cover; */
+  text-align: center;
+}
+h1{
+  color: white;
+  font-size: 60px !important;
+  font-family: "Montserrat";
+  font-weight: 700 !important;
+  text-shadow: 2px 2px 4px #000000;
+}
+h2 {
+  color: white;
+  font-size: 45px !important;
+  font-family: "Montserrat";
+  font-weight: 700 !important;
+  text-shadow: 2px 2px 4px #000000;
+}
+h5{
+  color: white;
+  font-family: "Montserrat";
+  padding: 3% 0% 3% 0%;
+  font-weight: 400 !important;
+}
+hr {
+  border-top: 0.5px solid white !important;
+  width: 300px;
+  opacity: 0.5;
+}
+p {
+  color: white;
+  font-family: "Montserrat" !important;
+}
+i {
+  color: white;
+  font-size: 20px;
+  padding: 4% 2% 0% 2%;
+}
+i:hover{
+  color: rgb(1, 247, 255);
+  cursor: pointer;
+}
+i:active {
+  opacity: 0.5;
+}
+
+
+/* MAIN PAGE */
+#main-page{
+  height: 700px;
+}
+#logo {
+  width: 65px;
+  height: 65px;
+  position: relative;
+  right: 5px;
+  bottom: 5px;
+}
+#brand-name{
+  color: rgb(55, 54, 54);
+  font-family: 'Exo 2';
+  font-weight: 700;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px #6c6a6a;
+}
+#main-background-image-div{
+  display: flex;
+  justify-content: center;
+}
+#main-background-image {
+  /* width: 1200px;
+  height: 640px; */
+  width: 100%;
+  height: auto;
+}
+#mainpage-content {
+  color: white;
+  padding-left: 10%;
+  position: relative;
+  bottom: 500px;
+  width: 100%;
+  height: auto;
+}
+#main-header-text{
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+#sub-text{
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin: 5% 0% 5% 0%;
+}
+
+#astronautBody {
+  position: absolute;
+  right: -270px;
+  bottom: -300px;
+  animation-name: body-movement;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-timing-function: linear;
+}
+@keyframes body-movement {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(0,-80px)
+  }
+}
+
+.navbar {
+  padding: 5px 10px 10px 10px !important;
+  height: 70px;
+  margin-bottom: 5rem;
+}
+.nav-item {
+  font-size: 18px;
+  font-family: "Montserrat" !important;
+}
+.nav-link:hover{
+  color: rgb(68, 0, 144) !important;
+}
+
+
+
+
+
+/* SPACE TUNE */
+
+#spacetune {
+  text-align: center;
+  padding: 7% 7% 7% 7%;
+}
+
+#spacetune-btn{
+  font-family: "Montserrat" !important;
+  font-weight: 600 !important;
+  width: 80%;
+  border-radius: 40px;
+
+}
+
+
+.icons-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+.tune-icon-circle {
+  background : linear-gradient(to right, rgb(181, 7, 107),rgb(92, 42, 157));
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px 30px 0px;
+  animation-name: tune-container-animate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes tune-container-animate {
+  1% {
+    background : linear-gradient(to right, rgb(106, 9, 125) 20%,rgb(0, 0, 92));
+  }
+  25%{
+    background : linear-gradient(to right, rgb(193, 96, 161),rgb(106, 9, 125));
+  }
+  50%{
+    background : linear-gradient(to right, rgb(92, 42, 157),rgb(69, 4, 106));
+  }
+  75%{
+    background : linear-gradient(to right, rgb(181, 7, 107),rgb(92, 42, 157));
+    /* good */
+  }
+  100%{
+    background : linear-gradient(to right, rgb(0, 106, 152),rgb(0, 54, 74));
+  }
+}
+.bi{
+  font-size: 90px;
+  color: white;
+  transform: rotate(360deg);
+  animation-name: tune-icon-animate;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes tune-icon-animate {
+    1% {
+      transform: rotate(0deg);
+    }
+    25%{
+      transform: rotate(90deg);
+    }
+    50%{
+      transform: rotate(180deg);
+    }
+    75%{
+      transform: rotate(270deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
+
+
+
+/* PLANETS */
+
+#planets {
+  text-align: center;
+  padding: 7% 17% 5% 17%;
+  background: linear-gradient(to top, rgb(181, 7, 107),rgb(92, 42, 157));
+}
+
+
+
+.planet-images {
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.planet-carousel-text {
+  padding: 5% 10% 0% 10%;
+
+}
+.planet-description {
+  color: white;
+  font-size: 20px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+
+/* SPACEGAME */
+
+#spacegame {
+  text-align: center;
+  padding: 7% 7% 7% 7%;
+  background : linear-gradient(to top, rgb(84, 30, 215),rgb(8, 0, 74));
+}
+#stars {
+  width: 100%;
+  height: auto;
+}
+
+#rocket {
+  width: 100px;
+  height: 200px;
+
+  position: absolute;
+  right: 500px;
+  top: 150px;
+  animation-name: rocket-movement;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
+@keyframes rocket-movement {
+  1% {
+    opacity: 1;
+    transform:  rotate(30deg) translate(50px, -150px) scale(1);
+  }
+  25% {
+    transform: rotate(45deg) translate(100px, -200px) scale(0.7);
+  }
+  50% {
+    transform: rotate(30deg) translate(150px, -250px) scale(0.5);
+  }
+  75% {
+    opacity: 1;
+    transform: rotate(45deg) translate(200px, -300px) scale(0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(30deg) translate(250px, -350px) scale(0.2);
+  }
+}
+
+.btn {
+  font-family: "Montserrat" !important;
+  font-weight: 600 !important;
+  margin: 20px 0px 20px 0px;
+}
+
+
+/* CONTACT */
+
+#contact {
+  text-align: center;
+  padding: 7% 7% 7% 7%;
+}
+#email-container {
+  display: flex;
+  justify-content: center;
+}
+#emailID{
+  margin-left: 20px;
+  color: white;
+}
+#emailID:hover{
+  color: rgb(1, 247, 255);
+}
+
+
+/* MEDIA FRAMES */
+
+@media (min-width: 1150px) and (max-width: 1221px) {
+
+  /* Main page */
+  #main-text-container {
+    position: relative;
+    transform: scale(0.95);
+    top: 50px;
+  }
+  #astronautBody {
+    position: absolute;
+    /* transform: scale(0.4); */
+    height: 550px;
+    right: -320px;
+    bottom: -290px;
+  }
+}
+@media (min-width: 1080px) and (max-width: 1150px) {
+
+  /* Main page */
+  #main-text-container {
+    position: relative;
+    transform: scale(0.88);
+    top: 50px;
+  }
+  #astronautBody {
+    position: absolute;
+    /* transform: scale(0.4); */
+    height: 500px;
+    right: -340px;
+    bottom: -310px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1080px) {
+
+  /* Main page */
+  #main-text-container {
+    position: relative;
+    transform: scale(0.9);
+    top: 50px;
+    /* right: 50px; */
+  }
+  #astronautBody {
+    position: absolute;
+    /* transform: scale(0.4); */
+    height: 450px;
+    right: -360px;
+    bottom: -250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+
+  /* Main page */
+  #main-text-container {
+    position: relative;
+    transform: scale(0.8);
+    top: 200px;
+    right: 50px;
+  }
+  #astronautBody {
+    position: absolute;
+    /* transform: scale(0.4); */
+    height: 350px;
+    right: -430px;
+    bottom: -300px;
+  }
+  #main-header-text {
+    width: 500px;
+  }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+
+  /* Main page */
+  #main-text-container {
+    position: relative;
+    transform: scale(0.65);
+    top: 300px;
+    right: 70px;
+  }
+  #astronautBody {
+    position: absolute;
+    /* transform: scale(1); */
+    height: 400px;
+    right: -320px;
+    bottom: -750px;
+  }
+  #main-header-text {
+    width: 500px;
+  }
+
+
+  /* Planets */
+  #planets{
+    padding: 7% 7% 5% 7%;
+  }
+  .planet-images{
+    width: 70%;
+  }
+}
+@media (min-width: 330px) and (max-width: 499px) {
+
+  /* Main page */
+  #main-text-container {
+    position: relative;
+    transform: scale(0.5);
+    top: 330px;
+    right: 70px;
+  }
+  #astronautBody {
+    position: absolute;
+    /* transform: scale(1); */
+    height: 400px;
+    right: -390px;
+    bottom: -750px;
+  }
+  #main-header-text {
+    width: 500px;
+  }
+
+  /* Planets */
+  #planets{
+    padding: 7% 0% 5% 0%;
+  }
+  .planet-images{
+    width: 70%;
+  }
+  .planet-carousel-text {
+    padding: 5% 5% 0% 5%;
+
+  }
+  .planet-carousel-text h2 {
+    font-size: 30px !important;
+  }
+
+  /* SpaceGame */
+  #rocket{
+    position: absolute;
+    right: 400px;
+    top: 100px;
+  }
+}
+@media (min-width: 200px) and (max-width: 329px) {
+
+  h2{
+    font-size: 35px !important;
+  }
+
+  /* Main page */
+  #main-page{
+    height: 520px;
+  }
+  #main-text-container {
+    text-align: center;
+    position: relative;
+    transform: scale(0.5);
+    top: 430px;
+    right: 60px;
+  }
+  #sub-text{
+    position: relative;
+    left: 50px;
+    width: 400px;
+  }
+  #astronautBody {
+    position: absolute;
+    /* transform: scale(1); */
+    height: 330px;
+    right: -450px;
+    bottom: -760px;
+  }
+  #main-header-text {
+    width: 500px;
+  }
+
+  /* SpaceTune */
+  #spacetune{
+    transform: scale(0.7);
+    padding: 0%;
+  }
+
+
+  /* Planets */
+  #planets{
+    padding: 7% 0% 5% 0%;
+  }
+  .planet-images{
+    width: 70%;
+  }
+  .planet-carousel-text {
+    padding: 5% 5% 0% 5%;
+
+  }
+  .planet-carousel-text h2 {
+    font-size: 25px !important;
+  }
+  .planet-description{
+    font-size: 15px;
+  }
+
+  /* SpaceGame */
+  #rocket{
+    width: 70px;
+    height: 140px;
+    position: absolute;
+    right: 300px;
+    top: 100px;
+  }
+  #spacegame .row .col-lg-6 h1{
+    font-size: 40px !important;
+  }
+}
