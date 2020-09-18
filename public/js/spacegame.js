@@ -81,14 +81,14 @@ $(document).keypress(function (ek) {
 
     $(document).on('keydown', function (e) {
       var key = e.keyCode;
-      if(key === 16 && go_up === false && game_over === false) {
+      if(key === 17 && go_up === false && game_over === false) {
         go_up = setInterval(up, 50);
       }
     });
 
     $(document).on('keyup', function (e) {
         var key = e.keyCode;
-        if (key === 16) {
+        if (key === 17) {
             clearInterval(go_up);
             go_up = false;
         }
@@ -214,7 +214,7 @@ $("#game-start").on("click", function () {
 
   function stop_the_game() {
       clearInterval(the_game);
-      var audio = new Audio("game-over.mp3");
+      var audio = new Audio("sounds/game-over.mp3");
       audio.play();
       game_over = true;
       restart_btn.show().fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
