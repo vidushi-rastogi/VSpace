@@ -16,6 +16,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>About Me</title>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8G660FD2XX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8G660FD2XX');
+    </script>
   </head>
   <body>
     <section id="header">
@@ -28,15 +38,15 @@
         <div class="col-lg-6 col-md-6" id="intro-img-section">
           <img src="images/image1.png" id="img1" alt="">
           <h2>Vidushi Rastogi</h2>
-          <h5>Web and Graphic Designer</h5>
+          <h5>Web Developer</h5>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6" id="intro-para">
 
           <h1>Who Am I?</h1>
 
-          <p>Holla Everyone! I am Vidushi, a <span><em>Web and Graphic Designer</em></span>.
+          <p>Holla Everyone! I am Vidushi, a fresher in<span><em> Web Developent</em></span>.
           Currently an undergraduate of <span>B.Sc(Hons) Computer Science from Dyal Singh College, Delhi University</span>.
-          I'm a fresher speacialising in front end <span>Web developent and Graphic designing</span>.
+          I'm a MERN Developer, having basic knowlegde of back end development and a good hands on experience in front end development.
           I've got knowlegde in programming languages like - <span>Python, c++, JavaScript</span> as well. <br>
 
           My hobbies are digital designing(obviously), drawing abstract art,
@@ -131,13 +141,121 @@
         </div>
       </div>
 
+    <div class="justify-content-center mt-5">
+      <button type="button" name="button" class="btn btn-outline-light btn-lg" id="review-btn" onClick="document.getElementById('reviewForm').scrollIntoView();">Review Form</button>
+    </div>
+    </section>
 
+    <section id="reviewForm" class="container">
+      <div class="row justify-content-center">
 
+        <div class="col-md-6">
+          <div class="card p-3 mb-5 bg-white">
+            <div class="card-body">
+              <div>
+                <h4 class="card-title">Provide Your Review Here!</h4>
+              </div>
+              <form action="/aboutme/reviewForm" method="post">
+
+                <div class="form-group">
+                  <label>Your Name</label>
+                  <input type="text" class="form-control" name="name">
+                  <p class="error"></p>
+                </div>
+                  <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" name="email" placeholder="name@example.com">
+                    <p class="error"></p>
+                  </div>
+
+                  <label>How's VSpace as a website?</label>
+                  <br>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="options" value="average">
+                    <label class="form-check-label">Average</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="options" value="above average">
+                    <label class="form-check-label">Above Average</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="options" value="good">
+                    <label class="form-check-label">Good</label>
+                  </div>
+
+                  <div class="form-group mt-2">
+                    <label>Tell us what you think about VSpace!</label>
+                    <textarea class="form-control" name="review" rows="3"></textarea>
+                    <p class="error"></p>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <button type="button" class="btn btn-primary" name="submit" id="submit">Submit Review</button>
+                    </div>
+                    <div class="col-6">
+                      <button type="button" class="btn btn-outline-dark float-right" name="submit" id="hide-form">Hide</button>
+                    </div>
+                  </div>
+
+                  <button type="submit" name="submit" id="submit1" style="display: none;"></button>
+              </form>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
 
 
 
     </section>
     <script src="js/JSjquery.min.js" charset="utf-8"></script>
-    <script src="js/AboutMe.js" charset="utf-8"></script>
+    <!-- <script src="js/AboutMe.js" charset="utf-8"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script>
+
+      $("#reviewForm").hide();
+
+      $("#review-btn").click(function(){
+        $("#reviewForm").slideDown();
+        $("#review-btn").hide();
+      });
+
+      $("#hide-form").click(function(){
+        $("#reviewForm").slideUp();
+        $("#review-btn").show();
+      })
+
+      $("#submit").click(function () {
+        // alert("blah");
+
+        var name = $("input[name='name']").val();
+        var email = $("input[name='email']").val();
+        var review = $("textarea[name='review']").val();
+
+        if(name !="" && email != "" && review != "") {
+          Swal.fire("Your review is submitted!");
+
+          setTimeout(function(){ $("#submit1").click(); }, 3000);
+
+        }
+        else {
+          if( name == "")
+            $(".error:eq(0)").html("Please enter your name");
+
+          if( email == "")
+            $(".error:eq(1)").html("Please enter your Email ID");
+
+          if( review == "")
+            $(".error:eq(2)").html("Please provide your review");
+        }
+
+
+});
+
+    </script>
   </body>
 </html>

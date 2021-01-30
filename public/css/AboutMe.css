@@ -58,6 +58,9 @@ i:hover {
 i:active {
   opacity: 0.5;
 }
+label {
+  font-weight: 600;
+}
 
 /* HEADER SECTION */
 
@@ -142,6 +145,16 @@ i:active {
   margin-top: 3%;
 }
 
+
+.card {
+  border-radius: 30px !important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.error {
+  color: red;
+  font-size: 14px;
+  font-style: italic;
+}
 
 /* MEDIA FRAMES */
 
