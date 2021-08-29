@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 //database connectivity
 //connecting with mongodb atlas cloud server online
-mongoose.connect("mongodb+srv://admin-vidushi:admin123@cluster0.bs1qi.mongodb.net/vspaceDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Make Mongoose use `findOneAndUpdate()`. Note that this option is `true`
 // by default, you need to set it to false.
